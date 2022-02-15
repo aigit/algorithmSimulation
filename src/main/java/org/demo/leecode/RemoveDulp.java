@@ -14,8 +14,21 @@ public class RemoveDulp {
 
     }
     //1 1 2 3 5 5 8
+    //1   2 3 5 5 8
     public static void removeDuplicates(int[] nums){
-        int low,high,size= nums.length,flag=0;
+        int low=0,high=1,size= nums.length,flag=0;
+
+        while (true){
+            if(high>nums.length-1){
+                break;
+            }
+            if(nums[high]==nums[low]){
+                nums[high+1] = 0;
+
+                return;
+            }
+        }
+
         for (int i = 0; i < nums.length; i++) {
             low= i;
             high=i+1;
