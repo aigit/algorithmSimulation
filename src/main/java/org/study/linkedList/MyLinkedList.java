@@ -1,11 +1,8 @@
 package org.study.linkedList;
 
-import java.util.Iterator;
-import java.util.function.Consumer;
-
 public class MyLinkedList<E>{
 
-    private Node head;
+    public Node head;
 
     public MyLinkedList(E e){
         head = new Node(e,null);
@@ -77,7 +74,7 @@ public class MyLinkedList<E>{
     }
 
 
-    public class Node<E> {
+    public static class Node<E> {
         private E val;
         private Node next;
 
